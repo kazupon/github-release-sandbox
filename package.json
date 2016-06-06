@@ -1,19 +1,25 @@
 {
   "name": "github-release-sandbox",
-  "version": "0.0.1",
   "description": "for github release test",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "author": "kazuya kawaguchi",
+  "bugs": {
+    "url": "https://github.com/kazupon/github-release-sandbox/issues"
   },
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.1.1",
+    "conventional-github-releaser": "git://github.com/kazupon/conventional-github-releaser.git#fix/config",
+    "git-commit-message-convention": "git://github.com/kazupon/git-commit-message-convention.git"
+  },
+  "homepage": "https://github.com/kazupon/github-release-sandbox#readme",
+  "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kazupon/github-release-sandbox.git"
   },
-  "author": "kazuya kawaguchi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kazupon/github-release-sandbox/issues"
-  },
-  "homepage": "https://github.com/kazupon/github-release-sandbox#readme"
+  "scripts": {
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -n ./node_modules/git-commit-message-convention/convention.js",
+    "release": "conventional-github-releaser -n ./node_modules/git-commit-message-convention/convention.js"
+  }
 }
