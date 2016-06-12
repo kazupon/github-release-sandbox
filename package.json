@@ -1,7 +1,7 @@
 {
   "name": "github-release-sandbox",
   "description": "for github release test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "kazuya kawaguchi",
   "bugs": {
     "url": "https://github.com/kazupon/github-release-sandbox/issues"
